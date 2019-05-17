@@ -1,0 +1,88 @@
+/*//判断三个数之积是否小于50或大于100
+import java.util.Scanner;
+public class Test{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		int c = scanner.nextInt();
+		String str = "是";
+		if(a*b*c>=50&&a*b*c<=100){
+			str = "不是";
+		}
+		System.out.println("a*b*c" + str + "小于50或者大于100");
+	}
+}*/
+/*//键盘输入一个年份，判断该年份是闰年还是平年
+import java.util.Scanner;
+public class Test{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		int year = scanner.nextInt();
+		String str = "是平年";
+		if((year%4==0&&year%100!=0)||year%400==0){
+			 str = "是闰年";
+		}
+		System.out.println(year + str );
+	}
+}*/
+/*//键盘输入2个数，请升序输出
+import java.util.Scanner;
+public class Test{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		int max = a;
+		int min = b;
+		if(a<b){
+			max = b;
+			min = a;
+		}
+		System.out.println(max + "\t" + min);
+	}
+}*/
+/*//键盘输入3个数，求出其中最大的数
+import java.util.Scanner;
+public class Test{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		int c = scanner.nextInt();
+		int max = a;
+		if(a<b){
+			max = b;
+		}
+		if(a<c){
+			max = c;
+		}
+		System.out.println(max);
+	}
+}*/
+//键盘输入3个数，请升序输出
+import java.util.Scanner;
+public class Test{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		int c = scanner.nextInt();
+		if(a<b){
+			a = a + b;
+			b = a - b;
+			a = a - b;
+		}
+		if(a<c){
+			a = a + c;
+			c = a - c;
+			a = a - c;
+		}
+		if(b<c){
+			b = b + c;
+			c = b - c;
+			b = b - c;
+		}
+		System.out.println(a + "\t" + b + "\t" + c);
+	}
+}

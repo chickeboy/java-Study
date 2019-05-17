@@ -1,0 +1,38 @@
+create database koo;创建库
+创建表
+create table stu(
+	id int auto_increment,
+	name varchar(20),
+	age	int,
+	score double,
+	primary key(id)
+);
+在使用库之前要打  use xxxx 库
+auto_increment 没添加一行数据 自增1
+varchar()表示字符串 ()中的数字代表这个字符串最大的长度
+double 表示小数
+primary key(id)表示这个表的主键是id 自增，并且是唯一的不可以重复
+show tables;
+desc koo	//显示表单的设计结构
+//插入一条数据
+insert into stu(name,age,score)values("张三",23,98.5);
+insert into stu(name,age)values("李四",22);
+//插入多条输出
+insert into stu(name,age,score)values("王五",18,99),("赵柳",17,99);
+//验证插入数据是否成功 查看整个表内的内容
+select * from stu;
+select name,age,score from stu;
+select avg(age) from stu; 平均值
+select * from stu where age > 18; 筛选条件
+select * from stu where age > 18 and name = "张三"; //并且
+select * from stu where age > 18 or name = "张三";  //或者
+select * from stu order by score desc limit 3; //limit ? 选择几条数据
+//order by 升序    order by desc 降序
+delete from stu where name = "张三";
+update stu set name = "666" where name = "李四";
+
+
+
+
+
+

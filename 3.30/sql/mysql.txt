@@ -1,0 +1,35 @@
+/*创建一个员工表
+数据库字段
+工号：id		整数 	自增    不可重复   自增    主键
+姓名: name	字符串	长度15
+年龄: age		整数	
+性别: gender 字符串  长度5
+部门:department  字符串  默认值  IT部
+薪资:salary	浮点型	
+入职时间	整数（在公司干了多久）	
+*/
+use employees;
+create table employees(
+	id int auto_increment,
+	name varchar(15),
+	age int,
+	gender varchar(5),
+	department varchar(50) default 'IT部',
+	salary float(8,2),
+	datatime int,
+	primary key(id)
+);
+select * from employees;
+select id,name,age,gender,department,salary,datatime from employees;//1.遍历整个员工表，打印出所有信息
+select * from employees where gender = "男";//2.查询所有男性员工信息
+select*from employees where age>30 and salary<5000;//3.查询所有年龄超过30并且薪资小于5000的员工信息
+select*from employees where age<30 and gender="女";//4.查询所有年龄小于30的女性信息
+select*from employees order by age;//5.根据年龄升序排序
+select*from employees where left(name,1) = "张";//6.查询所有姓张的员工信息
+select*from employees where age>40 or age<30;//7.查询所有年龄大于40或者年龄小于30的员工信息
+select avg(salary) from employees;//8.算出整个公司的平均工资
+select avg(salary) from employees where datatime>5 and gender = "男" ;//9.查询出所有干满5年的男性员工的平均工资并且输出最高的五位
+delete from employees where name = "张三";//10.删除张三的信息
+delete from employees where salary>10000;//11.删除所有薪资大于10000的员工信息
+update employees set  salary = salary + 1000 where salary<3000; //12.给所有工资低于3000的男性员工加1000
+update employees set salary = salary+10000 where left(name,1) = "孔";//13.给所有姓孔的员工工资加10000

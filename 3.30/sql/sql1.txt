@@ -1,0 +1,9 @@
+create database mysqldatabase;//创建库
+create table stu(
+	id int auto_increment,
+	name varchar(20),
+	age int,
+	score double,
+	primary key(id)
+);
+insert into stu(name,age,score)values("张三",20,90);

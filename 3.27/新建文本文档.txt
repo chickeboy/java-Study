@@ -1,0 +1,6 @@
+常用排序法：冒泡排序法、选择排序法、插入排序法
+Arrays类的用法：
+1.复制：Array.copyOf(数组名,新创建的数组长度);
+             Array.copyOfRange(数组名，复制起始位，复制结束位);
+             Array.equals(数组名1，数组名2)；（比较两个数组输出boolea型）
+             Array.
