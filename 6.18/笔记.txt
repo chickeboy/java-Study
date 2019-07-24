@@ -1,0 +1,106 @@
+HTML
+
+以<html>作为开头
+</htm>作结尾
+
+文件后缀：.html/.htm
+
+--------------------------------
+工具：
+1.New Project/Web Project
+2.New HTML   一定放在WebRoot
+
+3.服务器配置
+	Tomcat 7.x
+	Servers
+		Tomcat7.x
+			home directory 在bin之上的目录
+
+http://域名（IP）:端口号/资源
+
+4.项目发布到服务器
+	webapps下
+	开发项目下 WebRoot下的文件
+
+http://192.168.1.53:8080/Day_06_18/test1.html
+
+<h1~6>表示标题
+<p>  段落
+<hr/>水平线
+序列
+<ol>    有序  
+<li>    项
+<ul>   无序
+
+定义列表-----图文混排时，经常使用
+<dl>  
+	<dt>标题---无缩进
+	<dd>描述 
+
+图片
+1。必须在WebRoot
+2.   <img src="路径" alt="当图片显示不出时的提示文字“/>
+
+<table>-----表格
+	<tr>----行
+		<td></td>---单元格
+	</tr>
+</table>
+
+<span></span>行级，一小块区域，不换行
+
+<br/>换行
+
+<span style="color:red;font-size: 24pt">AB</span>
+
+<a href="跳转的地址路径"></a>  ---- 超链接
+1.在当前站点的不同页面间跳转（相对路径）
+2.可以访问其他站点中的页面（绝对路径，站点请求路径http://www.baidu.com)
+3.在同一个页面中锚定不同的位置
+	a.定义锚   <a name="标记名"></a>
+	b.链接      <a href="#标记名">...</a>
+
+-----------------------------------------------------------------------
+表单
+<form action="表单处理程序" method="表单域中数据提交的方式 get/post">
+	
+	文本域(text)
+	密码域(password)
+	复选框(checkbox)
+	单选按钮(radio)
+	下拉式列表，列表(select)
+	多行文本域(textarea)
+	按钮（提交按钮 submit    重置reset   button）
+
+	文件域 	file
+	隐藏域     hidden
+</form>	
+get:以首部提交（ url中提交）---默认，不安全，数据可见，大小最大8K
+	username=Tom&password=111
+	name  =     value &  
+	username=Tom
+
+
+post:以主体提交  ---  安全，数据封装，大小无限制
+	
+
+
+表单域
+1.input 控件
+	<input type="表单域类型" value="显示的内容" name="控件名"  id="标识符"/>
+2.其他
+	<select> ----    下拉式列表框
+		<option>---项
+
+	 <select size="显示项的个数">---列表框
+
+	<select multiple="">  ---可多选的列表框
+
+	<textarea>
+
+属性：
+	readonly="readonly"  ---- 只读
+	disabled="disabled"  ---- 不可用   
+
+
+	
